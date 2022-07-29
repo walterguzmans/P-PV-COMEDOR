@@ -1,6 +1,5 @@
 package com.example.proyecto_progra_5_comedor;
 
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,7 +10,7 @@ public class ConexionDB extends SQLiteOpenHelper {
     private static final int VERSION_BD = 1;
 
     public ConexionDB(Context context) {
-        super(context, NOMBRE_BD, null, VERSION_BD);
+        super(context, "COMEDOR_BD", null, VERSION_BD);
     }
 
     @Override
@@ -34,17 +33,19 @@ public class ConexionDB extends SQLiteOpenHelper {
         values.put(Utilidades.ID_USUARIO, "100");
         values.put(Utilidades.NOMBRE_USUARIO, "Shaquille");
         values.put(Utilidades.CONTRASEÑA_USUARIO, "12345");
-
         db.insert(Utilidades.TABLA_USUARIO, null, values);
+
+        values.put(Utilidades.ID_ADMIN, "50");
+        values.put(Utilidades.NOMBRE_ADMIN, "admin");
+        values.put(Utilidades.CONTRASEÑA_ADMIN, "admin");
+        db.insert(Utilidades.TABLA_ADMIN, null, values);
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL("DROP TABLE IF EXISTS " + Utilidades.TABLA_ADMIN);
-        db.execSQL("DROP TABLE IF EXISTS " + Utilidades.TABLA_USUARIO);
+        db.execSQL("DROP TABLE IF EXISTS TABLA_USUARIO");
+        db.execSQL("DROP TABLE IF EXISTS TABLA_ADMIN");
         onCreate(db);
     }
-
-
 }

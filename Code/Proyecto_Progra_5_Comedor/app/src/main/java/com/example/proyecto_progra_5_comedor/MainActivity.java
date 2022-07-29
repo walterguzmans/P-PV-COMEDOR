@@ -29,8 +29,13 @@ public class MainActivity extends AppCompatActivity {
         String usu = txtUsuario.getText().toString();
         String contra = txtContraseña.getText().toString();
 
-        if(usu.equals(Utilidades.NOMBRE_USUARIO) || contra.equals(Utilidades.CONTRASEÑA_USUARIO)){
-            Toast.makeText(this, "Logueo exitoso", Toast.LENGTH_SHORT).show();
+        if(usu.equals(Utilidades.NOMBRE_USUARIO) && contra.equals(Utilidades.CONTRASEÑA_USUARIO)){
+            Toast.makeText(this, "Logueo exitoso de Estudiante", Toast.LENGTH_SHORT).show();
+            //ALVARO SIGA DESDE AQUI, REDIRIGA LA OSTIA
+        }
+        else if (usu.equals(Utilidades.NOMBRE_ADMIN) && contra.equals(Utilidades.CONTRASEÑA_ADMIN)){
+            Toast.makeText(this, "Logueo exitoso de Admin", Toast.LENGTH_SHORT).show();
+            //ALVARO SIGA DESDE AQUI, REDIRIGA LA OSTIA
         }
         else{
             Toast.makeText(this, "Logueo fallido", Toast.LENGTH_SHORT).show();
