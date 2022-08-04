@@ -24,4 +24,9 @@ public class MenuAdmin extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void manteusuarios(View view){
+        Intent intent = new Intent(MenuAdmin.this,VentanaAdminUsuarios.class);
+        startActivity(intent);
+    }
+
 }
