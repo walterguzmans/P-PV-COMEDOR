@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#330066"
+    android:outlineProvider="none"
+    android:scrollbarThumbHorizontal="@color/black"
+    android:scrollbarThumbVertical="@color/black"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        app:srcCompat="@drawable/fondo"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="380dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbTitulo">
+
+        <TextView
+            android:id="@+id/lbUsuario"
+            android:layout_width="138dp"
+            android:layout_height="47dp"
+            android:text="Usuario:"
+            android:textColor="#F8F4F4"
+            android:textSize="30sp"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/txtUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F8F3F3"
+            android:ems="10"
+            android:hint="Nombre de usuario"
+            android:inputType="textPersonName"
+            android:textColor="#F8F5F5"
+            android:textColorHint="#989494" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="380dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="34dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/lbContraseña"
+            android:layout_width="168dp"
+            android:layout_height="50dp"
+            android:text="Contraseña:"
+            android:textColor="#F8F6F6"
+            android:textSize="30sp"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/txtContraseña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F8F3F3"
+            android:ems="10"
+            android:hint="Digite su contraseña"
+            android:inputType="textPassword"
+            android:textColor="#FBF8F8"
+            android:textColorHint="#989494" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="144dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.796"
+        tools:layout_editor_absoluteX="2dp">
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="140dp"
+            android:layout_height="68dp"
+            android:layout_margin="100px"
+            android:backgroundTint="#330066"
+            android:onClick="Login"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="140dp"
+            android:layout_height="68dp"
+            android:layout_margin="100px"
+            android:backgroundTint="#F8F5F5"
+            android:onClick="cancelar"
+            android:outlineProvider="none"
+            android:text="Cancelar"
+            android:textAllCaps="false"
+            android:textColor="#050505"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lbTitulo"
+        android:layout_width="145dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="133dp"
+        android:text="Login"
+        android:textAlignment="center"
+        android:textColor="#FDFDFD"
+        android:textIsSelectable="false"
+        android:textSize="125px"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
