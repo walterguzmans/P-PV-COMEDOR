@@ -38,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:backgroundTint="#FFFFFF"
+            android:onClick="carnet"
             android:text="carnet"
             android:textColor="#090808" />
 
