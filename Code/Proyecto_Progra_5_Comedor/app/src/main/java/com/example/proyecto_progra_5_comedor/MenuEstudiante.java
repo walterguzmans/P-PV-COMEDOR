@@ -23,4 +23,9 @@ public class MenuEstudiante extends AppCompatActivity {
         Intent intent = new Intent(MenuEstudiante.this,MainActivity.class);
         startActivity(intent);
     }
+
+    public void carnet(View view) {
+        Intent ventanaPerfil = new Intent(MenuEstudiante.this,PerfilEstudiante.class);
+        startActivity(ventanaPerfil);
+    }
 }
