@@ -44,8 +44,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:backgroundTint="#FFFFFF"
-            android:textColor="#090808"
-            android:text="administrar usuarios" />
+            android:onClick="manteusuarios"
+            android:text="administrar usuarios"
+            android:textColor="#090808" />
 
         <Button
             android:id="@+id/btnscanner"

@@ -16,6 +16,9 @@
         <activity
             android:name=".PerfilEstudiante"
             android:exported="false" />
+            <activity
+            android:name=".VentanaAdminUsuarios"
+            android:exported="false" />
         <activity
             android:name=".MenuAdmin"
             android:exported="false" />
