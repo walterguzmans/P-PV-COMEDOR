@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         ConexionDB conex = new ConexionDB(this,"Proyecto_Progra_5_Comedor",null,1);
         SQLiteDatabase db = conex.getReadableDatabase();
 
-        db.execSQL("INSERT OR IGNORE INTO  usuarios  (cedula ,nombre ,apellidos  ,usuario ,contraseña ,rol ) Values (123456789,'Shaquille','Lackwood Blanco','Shaco06','1234','Usuario')");
+        db.execSQL("INSERT OR IGNORE INTO usuarios (cedula ,nombre ,apellidos  ,usuario ,contraseña ,rol) Values (123456789,'Shaquille','Lackwood Blanco','Shaco06','1234','Usuario')");
         db.execSQL("INSERT OR IGNORE INTO usuarios (cedula ,nombre ,apellidos  ,usuario ,contraseña ,rol) Values (987654321,'Steven','Sibaja Araya','Stevensiar','1739','Administrador')");
         db.close();
 
