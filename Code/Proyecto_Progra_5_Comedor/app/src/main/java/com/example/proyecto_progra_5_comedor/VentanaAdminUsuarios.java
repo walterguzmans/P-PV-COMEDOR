@@ -28,7 +28,7 @@ public class VentanaAdminUsuarios extends AppCompatActivity {
         Cursor fila = bd.rawQuery("select nombre, apellidos,cedula from usuarios", null);
         if(fila.moveToFirst()){
             do{
-                listausuarios.add(fila.getString(0) + " - " + fila.getString(1)+ " - " + fila.getInt(2));
+                listausuarios.add(fila.getString(0) + "  -  " + fila.getString(1)+ "  -  " + fila.getInt(2));
             }while(fila.moveToNext());
         }
         bd.close();
