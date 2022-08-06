@@ -42,5 +42,4 @@ public class VentanaAdminUsuarios extends AppCompatActivity {
         Intent i = new Intent(VentanaAdminUsuarios.this, Modificar.class);
         startActivity(i);
     }
-
 }

@@ -34,16 +34,18 @@ public class Modificar extends AppCompatActivity {
         btnRegresar = findViewById(R.id.btnRegresar);
 
     }
+    //Boton para buscar estudiante por cedula
     public void BuscarEst(View vBuscar){
         ConexionDB conex = new ConexionDB(getApplicationContext(),"Proyecto_Progra_5_Comedor",null,1);
         SQLiteDatabase db = conex.getReadableDatabase();
+        //creacion de variable para comparar con base de datos
+        String CedulaEst = txtModCedula.getText().toString();
 
-       String CedulaEst = txtModCedula.getText().toString();
-
+        //seleccionar los datos que se van a llamar de la tabla
         try {
             Cursor cursor = db.rawQuery("select nombre, apellidos, usuario, contraseña, rol from usuarios where cedula == " + CedulaEst + "", null);
             cursor.moveToFirst();
-
+            //colocar los datos que se llaman arriba en los campos de esta ventana en orden (se usa el siguiente orden 0-?)
             txtModNombre.setText(cursor.getString(0));
             txtModApellidos.setText(cursor.getString(1));
             txtModNomUsu.setText(cursor.getString(2));
@@ -60,6 +62,9 @@ public class Modificar extends AppCompatActivity {
 
     }
     public void AgregarEst(View vAgregar){
+        ConexionDB conex = new ConexionDB(this, "Proyecto_Progra_5_Comedor", null, 1);
+        conex.AgregarEstudiante(txtModCedula.getText().toString(), txtModNombre.getText().toString(),
+                txtModApellidos.getText().toString(), txtModNomUsu.getText().toString(), txtModContra.getText().toString(), txtModRol.getText().toString());
 
         Toast.makeText(this, "Se ha Agregado el Estudiante correctamente", Toast.LENGTH_LONG).show();
     }
@@ -71,7 +76,11 @@ public class Modificar extends AppCompatActivity {
 
         Toast.makeText(this, "Se ha Eliminado el Estudiante correctamente", Toast.LENGTH_LONG).show();
     }
+    public void LimpiarMod(View vLimpiar){
+        limpiar();
 
+        Toast.makeText(this, "Se han Limpiado los Datos correctamente", Toast.LENGTH_LONG).show();
+    }
     //Regresa a la ventana de Mantenimiento de estudiante  y limpiar los datos
     public void Regresar(View vRegresar){
         limpiar();

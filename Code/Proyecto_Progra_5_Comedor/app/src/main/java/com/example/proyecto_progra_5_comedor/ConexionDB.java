@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -26,6 +27,13 @@ public class ConexionDB extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS usuarios");
         db.close();
 
+    }
+    public void AgregarEstudiante(String CedulaEA, String NombreEA, String ApellidosEA, String UsuarioEA, String ContraseñaEA, String RolEA){
+        SQLiteDatabase bd = getWritableDatabase();
+        if (bd!=null) {
+            bd.execSQL("INSERT INTO usuarios VALUES('"+CedulaEA+"','"+NombreEA+"','"+ApellidosEA+"','"+UsuarioEA+"','"+ContraseñaEA+"','"+RolEA+"')");
+            bd.close();
+        }
     }
 
 }
