@@ -38,7 +38,15 @@ public class ConexionDB extends SQLiteOpenHelper {
     public void ActualizarEstudiante(String CedulaEA, String NombreEA, String ApellidosEA, String UsuarioEA, String ContraseñaEA, String RolEA){
         SQLiteDatabase bd = getWritableDatabase();
         if (bd!=null) {
-            bd.execSQL("UPDATE usuarios SET nombre='"+NombreEA+"', apellidos='"+ApellidosEA+"', usuario='"+UsuarioEA+"', contraseña='"+ContraseñaEA+"', rol='"+RolEA+"' WHERE cedula='"+CedulaEA+"' ");
+            bd.execSQL("UPDATE usuarios SET nombre='"+NombreEA+"', apellidos='"+ApellidosEA+"', usuario='"+UsuarioEA+"'," +
+                    " contraseña='"+ContraseñaEA+"', rol='"+RolEA+"' WHERE cedula='"+CedulaEA+"' ");
+            bd.close();
+        }
+    }
+    public void EliminarEstudiante(String CedulaEA){
+        SQLiteDatabase bd = getWritableDatabase();
+        if (bd!=null) {
+            bd.execSQL("DELETE FROM usuarios WHERE cedula='"+CedulaEA+"'");
             bd.close();
         }
     }

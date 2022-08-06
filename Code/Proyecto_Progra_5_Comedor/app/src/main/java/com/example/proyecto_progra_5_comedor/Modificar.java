@@ -76,8 +76,11 @@ public class Modificar extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "Se ha Actualizado el Estudiante correctamente", Toast.LENGTH_LONG).show();
     }
     public void EliminarEst(View vEliminar){
+        ConexionDB conex = new ConexionDB(this, "Proyecto_Progra_5_Comedor", null, 1);
+        conex.EliminarEstudiante(txtModCedula.getText().toString());
 
-        Toast.makeText(this, "Se ha Eliminado el Estudiante correctamente", Toast.LENGTH_LONG).show();
+        limpiar();
+        Toast.makeText(getApplicationContext(), "Se ha Eliminado el Estudiante correctamente", Toast.LENGTH_LONG).show();
     }
     public void LimpiarMod(View vLimpiar){
         limpiar();
