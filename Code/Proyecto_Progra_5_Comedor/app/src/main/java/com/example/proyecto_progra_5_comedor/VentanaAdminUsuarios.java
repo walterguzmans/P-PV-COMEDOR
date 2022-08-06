@@ -2,9 +2,11 @@ package com.example.proyecto_progra_5_comedor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -36,6 +38,9 @@ public class VentanaAdminUsuarios extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listausuarios);
         lblista.setAdapter(adapter);
     }
-
+    public void Modificar(View vModificar){
+        Intent i = new Intent(VentanaAdminUsuarios.this, Modificar.class);
+        startActivity(i);
+    }
 
 }

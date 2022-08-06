@@ -14,9 +14,12 @@
         android:theme="@style/Theme.Proyecto_Progra_5_Comedor"
         tools:targetApi="31">
         <activity
+            android:name=".Modificar"
+            android:exported="false" />
+        <activity
             android:name=".PerfilEstudiante"
             android:exported="false" />
-            <activity
+        <activity
             android:name=".VentanaAdminUsuarios"
             android:exported="false" />
         <activity

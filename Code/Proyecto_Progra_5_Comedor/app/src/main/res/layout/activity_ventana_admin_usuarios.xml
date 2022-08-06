@@ -6,63 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".VentanaAdminUsuarios">
 
-    <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/fondo"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="420dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="15dp"
-        android:text="Mantenimiento de Usuarios"
-        android:textColor="#FBFAFA"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton4" />
-
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="48dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="-360dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="15dp"
-        android:background="#FAF1F1"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="421dp"
+        android:layout_height="741dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.033" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fondo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="25dp"
+        android:text="Mantenimiento de Estudiantes"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="410dp"
-        android:layout_height="31dp"
-        android:layout_marginEnd="1dp"
+        android:id="@+id/linearLayout7"
+        android:layout_width="405dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="5dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/lblista"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
             android:text="Nombre"
-            android:textColor="#FBFAFA"
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
         <TextView
@@ -72,7 +60,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="Apellidos"
-            android:textColor="#FBFAFA"
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
         <TextView
@@ -82,7 +70,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="Cedula"
-            android:textColor="#FBFAFA"
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
         <TextView
@@ -92,52 +80,38 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="Beca"
-            android:textColor="#FBFAFA"
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
+
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btnmodificar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginEnd="-50dp"
-        android:layout_marginBottom="124dp"
-        android:backgroundTint="#330066"
-        android:text="Modificar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
-        app:layout_constraintHorizontal_bias="0.646"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblista" />
-
-    <Button
-        android:id="@+id/btneliminar"
-        android:layout_width="114dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginBottom="124dp"
-        android:backgroundTint="#FCFFFF"
-        android:text="Eliminar"
-        android:textColor="#090808"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.574"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
-        app:layout_constraintTop_toBottomOf="@+id/lblista" />
 
     <ListView
         android:id="@+id/lblista"
-        android:layout_width="411dp"
-        android:layout_height="185dp"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="2dp"
+        android:layout_width="414dp"
+        android:layout_height="304dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="30dp"
         android:background="#FFFFFF"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
-        app:layout_constraintHorizontal_bias="0.546"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
-        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+        app:layout_constraintBottom_toTopOf="@+id/btnmodificar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+
+    <Button
+        android:id="@+id/btnmodificar"
+        android:layout_width="149dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="141dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#330066"
+        android:onClick="Modificar"
+        android:text="Modificar"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblista" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
