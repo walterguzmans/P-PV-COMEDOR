@@ -66,11 +66,14 @@ public class Modificar extends AppCompatActivity {
         conex.AgregarEstudiante(txtModCedula.getText().toString(), txtModNombre.getText().toString(),
                 txtModApellidos.getText().toString(), txtModNomUsu.getText().toString(), txtModContra.getText().toString(), txtModRol.getText().toString());
 
-        Toast.makeText(this, "Se ha Agregado el Estudiante correctamente", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Se ha Agregado el Estudiante correctamente", Toast.LENGTH_LONG).show();
     }
     public void ActualizarEst(View vActualizar){
+        ConexionDB conex = new ConexionDB(this, "Proyecto_Progra_5_Comedor", null, 1);
+        conex.ActualizarEstudiante(txtModCedula.getText().toString(), txtModNombre.getText().toString(),
+                txtModApellidos.getText().toString(), txtModNomUsu.getText().toString(), txtModContra.getText().toString(), txtModRol.getText().toString());
 
-        Toast.makeText(this, "Se ha Actualizado el Estudiante correctamente", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Se ha Actualizado el Estudiante correctamente", Toast.LENGTH_LONG).show();
     }
     public void EliminarEst(View vEliminar){
 
